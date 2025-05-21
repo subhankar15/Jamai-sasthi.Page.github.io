@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>জামাই ষষ্ঠীর শুভেচ্ছা</title>
+    <style>
+        body {
+            font-family: 'Kalam', 'Hind Siliguri', cursive, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #4A4A4A;
+            background-color: #FFF7E0;
+            background-image: url('YOUR_FLOWER_LEAF_BACKGROUND_IMAGE.png'); /* আপনার ফুল-পাতার ছবির নাম */
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Kalam:wght@400;700&display=swap');
+
+        .jamai-sasthi-image {
+            max-width: 380px;
+            width: 80%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            margin-bottom: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            max-width: 520px;
+            width: 90%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .decorative-food {
+            position: absolute;
+            width: 70px;
+            height: auto;
+            z-index: 5;
+            opacity: 0.9;
+        }
+
+        #food-mishti {
+            top: 12%; left: 3%;
+            transform: rotate(-12deg) scale(0.95);
+        }
+
+        #food-maach {
+            bottom: 8%; right: 2%;
+            transform: rotate(10deg) scale(0.95);
+            width: 80px;
+        }
+
+        h1 {
+            font-family: 'Kalam', cursive;
+            color: #D81B60;
+            font-size: 2.8em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-family: 'Hind Siliguri', sans-serif;
+            color: #00796B;
+            font-size: 1.4em;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .animated-text { animation: fadeInUp 1s ease-out, pulse 2.5s infinite 1s; }
+        .sender-name-animated { animation: fadeInScale 1.2s ease-out; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.85); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        input[type="text"] {
+            padding: 12px; margin-top: 15px; margin-bottom: 20px;
+            border: 1px solid #BDBDBD;
+            border-radius: 8px;
+            width: calc(100% - 26px); font-size: 17px;
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+        input[type="text"]::placeholder {
+            color: #9E9E9E;
+        }
+
+        #shareWishButton {
+            padding: 14px 30px;
+            background: linear-gradient(135deg, #EF6C00, #D81B60);
+            color: white;
+            border: none; border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px; font-weight: bold;
+            transition: all 0.3s ease;
+            font-family: 'Hind Siliguri', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        #shareWishButton:hover {
+            background: linear-gradient(135deg, #E65100, #C2185B);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        label {
+            color: #616161;
+            font-weight: 600;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #loadingMessage {
+            margin-top: 15px;
+            font-size: 15px;
+            color: #00796B;
+            font-weight: 500;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.4em; }
+            h2 { font-size: 1.2em; }
+            .decorative-food { width: 50px; }
+            #food-mishti { top: 8%; left: 2%; }
+            #food-maach { bottom: 5%; right: 1%; width: 60px; }
+            .container { padding: 20px; }
+            #shareWishButton { width: 100%; padding: 12px 25px;}
+            #shareWishButton svg { width: 20px; height: 20px; margin-right: 8px;}
+        }
+         @media (max-width: 480px) {
+            h1 { font-size: 2em; }
+            .decorative-food { display: none; }
+            .container { border-radius: 15px; padding: 15px; }
+            input[type="text"], #shareWishButton { font-size: 16px; }
+            #shareWishButton svg { width: 18px; height: 18px; margin-right: 8px;}
+        }
+    </style>
+</head>
+<body>
+    <img src="mishti.png" alt="মিষ্টি" class="decorative-food" id="food-mishti">
+    <img src="maach.png" alt="মাছ" class="decorative-food" id="food-maach">
+
+    <div class="container">
+        <img src="জামাই ষষ্ঠী.png" alt="জামাই ষষ্ঠী" class="jamai-sasthi-image">
+        <h1 class="animated-text">শুভ জামাই ষষ্ঠী!</h1>
+        <div id="senderInfo"></div>
+        <label for="nameInput">আপনার নাম লিখুন:</label>
+        <input type="text" id="nameInput" placeholder="এখানে আপনার নাম লিখুন">
+
+        <button id="shareWishButton" onclick="generateAndShareWish()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white" style="margin-right: 10px; vertical-align: middle;">
+                <!-- WhatsApp SVG Path -->
+                <path d="M12 2.042c5.504 0 9.958 4.454 9.958 9.958s-4.454 9.958-9.958 9.958c-1.815 0-3.536-.486-5.066-1.37l-1.528 3.055 3.102-1.558c-1.005-.768-1.848-1.744-2.476-2.876-1.278-2.296-1.333-5.096-.143-7.453.606-1.194 1.494-2.214 2.596-3.021C6.464 2.526 9.186 2.042 12 2.042zm0 1.673c-2.48 0-4.77.825-6.61 2.284-.91.716-1.644 1.645-2.147 2.708-1.063 2.234-1.016 4.835.125 6.934.56 1.037 1.376 1.91 2.313 2.616l-2.394 1.208 1.234-2.468c.792.408 1.655.626 2.55.626 4.673 0 8.46-3.788 8.46-8.461s-3.787-8.461-8.46-8.461zm4.621 11.444c-.232-.116-1.376-.675-1.588-.756-.212-.082-.367-.116-.522.116-.154.232-.597.756-.731.904-.135.154-.271.175-.503.058-.232-.116-.978-.358-1.863-1.15-1.037-.925-1.498-1.645-1.71-1.923-.212-.271-.033-.417.082-.541.101-.116.232-.287.348-.434.116-.154.154-.271.232-.458.082-.188-.016-.343-.099-.476-.116-.135-.522-1.256-.716-1.71-.188-.442-.383-.375-.522-.384-.126-.016-.271-.016-.417-.016s-.383.058-.589.287c-.203.212-.783.764-.783 1.863 0 1.099.801 2.158.916 2.304.116.154 1.588 1.692 3.842 2.684 1.005.434 1.783.691 2.394.892.768.239 1.256.203 1.498.126.287-.082.884-.367.999-.716.116-.358-.126-.514-.242-.622z"/>
+            </svg>
+            শুভেচ্ছা পাঠান <!-- বাটনের টেক্সট পরিবর্তন করা হলো -->
+        </button>
+        <div id="loadingMessage">শেয়ার করার জন্য প্রস্তুত করা হচ্ছে...</div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const senderName = urlParams.get('sender');
+            const mainTitle = document.querySelector('h1');
+
+            if (senderName) {
+                const decodedSenderName = decodeURIComponent(senderName);
+                const senderInfoDiv = document.getElementById('senderInfo');
+                const senderGreeting = document.createElement('h2');
+                senderGreeting.textContent = `${decodedSenderName} আপনাকে জামাই ষষ্ঠীর শুভেচ্ছা পাঠিয়েছেন!`;
+                senderGreeting.classList.add('sender-name-animated');
+                senderInfoDiv.appendChild(senderGreeting);
+            }
+            mainTitle.classList.add('animated-text');
+            document.getElementById('nameInput').focus();
+        };
+
+        function generateAndShareWish() {
+            const nameInput = document.getElementById('nameInput');
+            const yourName = nameInput.value.trim(); // যিনি শেয়ার করছেন তার নাম
+            if (yourName === "") {
+                alert("অনুগ্রহ করে আপনার নাম লিখুন।");
+                return;
+            }
+
+            // শুভেচ্ছা লিঙ্ক তৈরি করা (এটি পেজে দেখানো হবে না, কিন্তু শেয়ার করা হবে)
+            const baseUrl = window.location.href.split('?')[0];
+            const encodedSenderNameForLink = encodeURIComponent(yourName);
+            const wishLink = `${baseUrl}?sender=${encodedSenderNameForLink}`;
+
+            const loadingMessageDiv = document.getElementById('loadingMessage');
+            loadingMessageDiv.textContent = 'শেয়ার করার জন্য প্রস্তুত করা হচ্ছে...'; // জেনেরিক মেসেজ
+            loadingMessageDiv.style.display = 'block';
+
+            const shareTitle = `জামাই ষষ্ঠীর শুভেচ্ছা!`;
+            // Web Share API এর জন্য টেক্সট (এখানে লিঙ্কটি url প্যারামিটারে যাবে)
+            const navigatorShareText = `${yourName} আপনাকে জামাই ষষ্ঠীর এই স্পেশাল শুভেচ্ছাটি পাঠিয়েছেন! 🎁\n\nআপনিও আপনার প্রিয়জনদের শুভেচ্ছা জানান!`;
+            // WhatsApp এর জন্য টেক্সট (এখানে লিঙ্কটি টেক্সটের অংশ হবে)
+            const whatsappMessageText = `${yourName} আপনাকে জামাই ষষ্ঠীর এই স্পেশাল শুভেচ্ছাটি পাঠিয়েছেন! 🎁\n\nএই লিঙ্কে ক্লিক করে দেখুন:\n${wishLink}\n\nআপনিও আপনার প্রিয়জনদের শুভেচ্ছা জানান!`;
+
+            // Web Share API ব্যবহার করার চেষ্টা
+            if (navigator.share) {
+                navigator.share({
+                    title: shareTitle,
+                    text: navigatorShareText, // এই টেক্সটটি লিঙ্কের সাথে কিছু অ্যাপে দেখানো হতে পারে
+                    url: wishLink,          // শেয়ার করার মূল লিঙ্ক
+                })
+                .then(() => {
+                    console.log('Successfully shared via Web Share API');
+                    loadingMessageDiv.style.display = 'none';
+                })
+                .catch((error) => {
+                    console.error('Error using Web Share API:', error);
+                    loadingMessageDiv.style.display = 'none';
+                    // যদি ব্যবহারকারী শেয়ার ডায়ালগ বাতিল করে, তাহলেও এখানে এরর আসতে পারে
+                    // alert('শেয়ার করা সম্ভব হয়নি। আবার চেষ্টা করুন।'); // ঐচ্ছিক
+                });
+            } else {
+                // Web Share API উপলব্ধ না থাকলে WhatsApp-এ ফলব্যাক করুন
+                console.log('Web Share API not supported. Falling back to WhatsApp.');
+                const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(whatsappMessageText)}`;
+                setTimeout(() => { // ব্যবহারকারীকে লোডিং মেসেজ দেখার জন্য সামান্য ডিলে
+                    window.open(whatsappUrl, '_blank');
+                    loadingMessageDiv.style.display = 'none';
+                }, 500);
+            }
+        }
+    </script>
+</body>
+</html>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '78eeffbe9489668d8ab5afe9320a052b',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="
+
+text/javascript" src="//www.highperformanceformat.com/78eeffbe9489668d8ab5afe9320a052b/invoke.js"></script>
